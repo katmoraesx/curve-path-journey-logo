@@ -11,24 +11,29 @@ const Logo = ({ className = '', size = 80 }: { className?: string; size?: number
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Curved Path */}
+        {/* Background Road */}
         <path
-          d="M20 80C20 80 35 80 45 65C55 50 45 35 55 20C65 5 80 20 80 20"
-          stroke="#1A1F2C"
-          strokeWidth="3"
+          d="M15 80C15 80 30 80 45 60C60 40 50 30 65 15C80 0 85 15 85 15"
+          stroke="#E2E8F0"
+          strokeWidth="12"
           strokeLinecap="round"
           className="animate-draw"
         />
         
-        {/* Arrow */}
+        {/* Main Road Line */}
         <path
-          d="M75 15L80 20L85 15"
-          stroke="#D6BCFA"
-          strokeWidth="3"
+          d="M15 80C15 80 30 80 45 60C60 40 50 30 65 15C80 0 85 15 85 15"
+          stroke="#1A1F2C"
+          strokeWidth="6"
           strokeLinecap="round"
-          strokeLinejoin="round"
-          className="animate-fade-in"
+          className="animate-draw"
+          strokeDasharray="200"
         />
+        
+        {/* Road Markers */}
+        <circle cx="15" cy="80" r="3" fill="#D6BCFA" className="animate-fade-in" />
+        <circle cx="45" cy="60" r="2.5" fill="#D6BCFA" className="animate-fade-in" />
+        <circle cx="65" cy="15" r="2" fill="#D6BCFA" className="animate-fade-in" />
       </svg>
     </div>
   );
