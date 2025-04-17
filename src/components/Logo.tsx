@@ -16,40 +16,77 @@ const Logo = ({ className = '', size = 80 }: { className?: string; size?: number
           cx="50"
           cy="50"
           r="40"
-          stroke="#E2E8F0"
+          stroke="#18837E"
           strokeWidth="8"
           className="animate-draw"
           strokeDasharray="251.2"
         />
 
-        {/* Inner Ring */}
+        {/* Road Path Ring */}
         <circle
           cx="50"
           cy="50"
           r="25"
-          stroke="#1A1F2C"
-          strokeWidth="4"
+          stroke="#18837E"
+          strokeOpacity="0.6"
+          strokeWidth="3"
           className="animate-draw"
           strokeDasharray="157"
+          strokeDashoffset="10"
         />
 
         {/* Steering Wheel Grips */}
         <path
           d="M50 25L50 35M50 65L50 75M25 50L35 50M65 50L75 50"
-          stroke="#1A1F2C"
+          stroke="#18837E"
           strokeWidth="4"
           strokeLinecap="round"
           className="animate-draw"
           strokeDasharray="40"
         />
 
-        {/* Center Point */}
+        {/* Center Point with Gradient */}
         <circle
           cx="50"
           cy="50"
-          r="3"
-          fill="#D6BCFA"
+          r="4"
+          fill="#18837E"
           className="animate-fade-in"
+          opacity="0.8"
+        />
+
+        {/* Dynamic Road Markers */}
+        <circle
+          cx="50"
+          cy="15"
+          r="2"
+          fill="#18837E"
+          className="animate-fade-in"
+          opacity="0.6"
+        />
+        <circle
+          cx="85"
+          cy="50"
+          r="2"
+          fill="#18837E"
+          className="animate-fade-in"
+          opacity="0.6"
+        />
+        <circle
+          cx="50"
+          cy="85"
+          r="2"
+          fill="#18837E"
+          className="animate-fade-in"
+          opacity="0.6"
+        />
+        <circle
+          cx="15"
+          cy="50"
+          r="2"
+          fill="#18837E"
+          className="animate-fade-in"
+          opacity="0.6"
         />
       </svg>
     </div>
@@ -57,4 +94,3 @@ const Logo = ({ className = '', size = 80 }: { className?: string; size?: number
 };
 
 export default Logo;
-
